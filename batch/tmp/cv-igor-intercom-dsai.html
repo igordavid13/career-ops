@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Igor David — CV</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('../../fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('../../fonts/space-grotesk-latin-ext.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('../../fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('../../fonts/dm-sans-latin-ext.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #1a1a2e;
+    background: #ffffff;
+  }
+  .page { width: 100%; max-width: 210mm; margin: 0 auto; padding: 2px 0; }
+  .header { margin-bottom: 20px; }
+  .header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28px; font-weight: 700; color: #1a1a2e;
+    letter-spacing: -0.02em; margin-bottom: 6px; line-height: 1.1;
+  }
+  .header-gradient {
+    height: 2px;
+    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    border-radius: 1px; margin-bottom: 10px;
+  }
+  .contact-row {
+    display: flex; flex-wrap: wrap; gap: 8px 14px;
+    font-family: 'DM Sans', sans-serif; font-size: 10.5px; line-height: 1.4; color: #555;
+  }
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-row .separator { color: #ccc; }
+  a { white-space: nowrap; }
+  .section { margin-bottom: 18px; }
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.06em; color: hsl(187, 74%, 32%);
+    border-bottom: 1.5px solid #e2e2e2; padding-bottom: 4px; margin-bottom: 10px;
+  }
+  .summary-text { font-size: 11px; line-height: 1.7; color: #2f2f2f; }
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .competency-tag {
+    font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 500;
+    color: hsl(187, 74%, 28%); background: hsl(187, 40%, 95%);
+    padding: 4px 10px; border-radius: 3px; border: 1px solid hsl(187, 40%, 88%);
+  }
+  .job { margin-bottom: 14px; }
+  .job-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 12px; margin-bottom: 4px;
+  }
+  .job-company {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px; font-weight: 600; color: hsl(270, 70%, 45%);
+  }
+  .job-period { font-size: 10.5px; color: #777; white-space: nowrap; }
+  .job-role { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 6px; }
+  .job ul { padding-left: 18px; margin-top: 6px; }
+  .job li { font-size: 10.5px; line-height: 1.6; color: #333; margin-bottom: 4px; }
+  .project { margin-bottom: 12px; }
+  .project-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11.5px; font-weight: 600; color: hsl(270, 70%, 45%);
+  }
+  .project-desc { font-size: 10.5px; color: #444; margin-top: 3px; line-height: 1.55; }
+  .project-tech { font-size: 9.5px; color: #888; margin-top: 3px; }
+  .edu-item { margin-bottom: 8px; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .edu-title { font-weight: 600; font-size: 11px; color: #333; }
+  .edu-org { color: hsl(270, 70%, 45%); font-weight: 500; }
+  .edu-year { font-size: 10px; color: #777; white-space: nowrap; }
+  .edu-desc { font-size: 10px; color: #666; margin-top: 2px; line-height: 1.5; }
+  .cert-item {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 12px; margin-bottom: 6px;
+  }
+  .cert-title { font-size: 10.5px; font-weight: 500; color: #333; }
+  .cert-org { color: hsl(270, 70%, 45%); }
+  .cert-year { font-size: 10px; color: #777; white-space: nowrap; }
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .skill-item { font-size: 10.5px; color: #444; }
+  .skill-category { font-weight: 600; color: #333; font-size: 10.5px; }
+  @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .page { padding: 0; } }
+  .avoid-break, .job, .project, .edu-item, .cert-item { break-inside: avoid; page-break-inside: avoid; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header avoid-break">
+    <h1>Igor David</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>igordavid13@gmail.com</span>
+      <span class="separator">|</span>
+      <a href="https://www.linkedin.com/in/igor-david-880209171/">linkedin.com/in/igor-david</a>
+      <span class="separator">|</span>
+      <a href="https://github.com/igordavid13">github.com/igordavid13</a>
+      <span class="separator">|</span>
+      <span>Brasília, Brazil — open to EU relocation</span>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">Applied AI engineer with 5+ years shipping production AI, enterprise backends, and IoT products end-to-end. Built a live RAG pipeline on Vespa + Vertex AI for a customer-facing chatbot (<a href="https://igniteattachments.com">igniteattachments.com</a>) — covering retrieval design, prompt engineering, and LLM evaluation loops. Trained CNN classifiers on EEG data pipelines at Neuko and delivered SQL-backed operational dashboards at Brazil's largest state-owned bank (CAIXA). Strong Python, SQL, and React/Next.js full-lifecycle delivery. Currently founding TRINA, an AI software factory. Published IoT researcher (2 peer-reviewed papers).</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">RAG Pipelines</span>
+      <span class="competency-tag">Vector Search (Vespa)</span>
+      <span class="competency-tag">LLM Evaluations</span>
+      <span class="competency-tag">Prompt Design</span>
+      <span class="competency-tag">Python Data Pipelines</span>
+      <span class="competency-tag">SQL (DB2 / PostgreSQL)</span>
+      <span class="competency-tag">React / Next.js</span>
+      <span class="competency-tag">Applied ML / CNNs</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Arrow — Los Angeles, CA (Remote)</div>
+        <div class="job-period">Apr 2025 — Jan 2026</div>
+      </div>
+      <div class="job-role">Full-Stack Developer — Prompt Engineer</div>
+      <ul>
+        <li>Engineered a <strong>RAG pipeline</strong> with document ingestion, <strong>vector search on Vespa</strong>, and Vertex AI LLM orchestration — including prompt design and retrieval evaluation loops (Vespa, Vertex AI, Vercel AI SDK).</li>
+        <li>Shipped an <strong>AI-powered chatbot</strong> to production at <a href="https://igniteattachments.com">igniteattachments.com</a> for customer engagement and self-service support — end-to-end from problem framing to React frontend delivery (Next.js, Remix, MongoDB).</li>
+        <li>Built a tractor valuation management system with full CRUD for pricing and inventory editing (Next.js, MongoDB, Vespa).</li>
+        <li>Orchestrated ETL pipelines for data transformation and loading workflows (TypeScript, GCP).</li>
+        <li>Designed and implemented web-scraping solutions for automated data collection (Crawl4AI, Python).</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">TRINA — Brasília</div>
+        <div class="job-period">Feb 2026 — Present</div>
+      </div>
+      <div class="job-role">Founder</div>
+      <ul>
+        <li>Founded an AI-focused software factory delivering intelligent products for automotive and insurance verticals — end-to-end from discovery to production delivery.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">CAIXA Econômica Federal — Brasília</div>
+        <div class="job-period">Jan 2025 — Present</div>
+      </div>
+      <div class="job-role">Software Engineer — Full-Stack Developer (Credit Card division)</div>
+      <ul>
+        <li>Designed and shipped interactive <strong>SQL-backed dashboards</strong> for real-time monitoring of credit-card authorization metrics and operational KPIs (Angular, DB2).</li>
+        <li>Migrated a legacy COBOL-based card provisioning system to Java Quarkus with advanced filtering and reporting capabilities (Java Quarkus, DB2).</li>
+        <li>Refactored core modules of the credit-card authorization system, improving maintainability and performance across the transaction pipeline (Java Quarkus, COBOL).</li>
+        <li>Built validation features with comprehensive unit and integration test coverage for data integrity (Java Quarkus, JUnit).</li>
+        <li>Implemented full CRUD for back-office management of card operations (Angular, Java Quarkus, DB2).</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Neuko — Brasília</div>
+        <div class="job-period">Feb 2024 — Aug 2024</div>
+      </div>
+      <div class="job-role">Data Engineer — Neural Network Engineer</div>
+      <ul>
+        <li>Applied <strong>data science to EEG signals</strong> — trained CNN classifiers, ran model evaluations, and built scalable <strong>Python data pipelines</strong> for event classification on noisy brainwave data.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">BRISA — Brasília</div>
+        <div class="job-period">Sep 2023 — Jan 2025</div>
+      </div>
+      <div class="job-role">Software Engineer — Backend Developer</div>
+      <ul>
+        <li>Designed and shipped 4 commercial IoT products: intelligent lock, industrial smart hub, panic-button device, smart garbage collector (ESP32, PostgreSQL).</li>
+        <li>Developed firmware for ESP32 microcontrollers, optimizing performance and reliability (C, C++, ESP-IDF).</li>
+        <li>Built the back-end platform for device communication, data ingestion, and remote management (TypeScript, Next.js).</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">UnB IoT Lab — University of Brasília</div>
+        <div class="job-period">Jan 2021 — Dec 2023</div>
+      </div>
+      <div class="job-role">R&D Engineer</div>
+      <ul>
+        <li>Authored two peer-reviewed scientific articles on IoT architectures (fog computing; panic-button system with ML).</li>
+        <li>Contributed to smart-device projects combining ESP32 microcontrollers and 3D-printing for real-time monitoring and campus safety.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Kodera Tecnologia — Remote</div>
+        <div class="job-period">Feb 2023 — May 2023</div>
+      </div>
+      <div class="job-role">Software Developer</div>
+      <ul>
+        <li>Developed scalable back-end web systems with Ruby on Rails and PostgreSQL, with robust database management.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Projects</div>
+
+    <div class="project">
+      <div class="project-title">Arrow RAG Chatbot — Production</div>
+      <div class="project-desc">Engineered RAG ingestion + retrieval pipeline on Vespa + Vertex AI; full chatbot stack in Next.js/Remix/MongoDB for a US tractor-attachments client. Live at <a href="https://igniteattachments.com">igniteattachments.com</a>.</div>
+      <div class="project-tech">Vespa · Vertex AI · Vercel AI SDK · Next.js · Remix · MongoDB</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">CAIXA Credit-Card Authorization Pipeline</div>
+      <div class="project-desc">Refactored core authorization modules and migrated legacy COBOL card-provisioning to Java Quarkus on DB2 — with Angular dashboards surfacing real-time KPIs.</div>
+      <div class="project-tech">Java Quarkus · COBOL · DB2 · Angular</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Neuko — EEG Classifier (Applied ML)</div>
+      <div class="project-desc">Designed scalable EEG data-processing pipelines and trained CNN classifiers for event classification on brainwave signals.</div>
+      <div class="project-tech">Python · CNNs · Data Pipelines · ML Evaluation</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">BRISA IoT Product Line (ESP32)</div>
+      <div class="project-desc">Designed and shipped 4 commercial IoT products (smart lock, industrial smart hub, panic button, smart garbage collector) — firmware in C/C++/ESP-IDF + backend in TypeScript/Next.js.</div>
+      <div class="project-tech">ESP32 · ESP-IDF · C/C++ · TypeScript · Next.js</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-title">B.Sc. Computer Engineering — <span class="edu-org">Universidade de Brasília (UnB)</span></div>
+        <div class="edu-year">Aug 2018 — Dec 2024</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Certifications</div>
+    <div class="cert-item">
+      <div class="cert-title">Huawei AI Training — ML &amp; Deep Learning <span class="cert-org"></span></div>
+      <div class="cert-year">2022</div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title">Autodesk Fusion 360 — 3D Modeling <span class="cert-org"></span></div>
+      <div class="cert-year">2020</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Publications</div>
+    <div class="cert-item">
+      <div class="cert-title">Proposal of Architecture Using Fog Computing and Orchestration by Parameters — <span class="cert-org">UIoT Lab</span></div>
+      <div class="cert-year">Nov 2022</div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title">Implementation of a Panic Button System Based on IoT, Mobile Networks, and ML — <span class="cert-org">UIoT Lab</span></div>
+      <div class="cert-year">Dec 2023</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-category">AI / ML:</span> RAG pipelines, vector search (Vespa), LLM evaluation, prompt design, CNNs, deep learning, NLP, Vertex AI, Vercel AI SDK, Crawl4AI, Pandas.</div>
+      <div class="skill-item"><span class="skill-category">Languages:</span> Python, Java, TypeScript, SQL, C, C++, COBOL, Ruby.</div>
+      <div class="skill-item"><span class="skill-category">Data / Storage:</span> PostgreSQL, MongoDB, DB2, Vespa — strong SQL.</div>
+      <div class="skill-item"><span class="skill-category">Web / Full-Stack:</span> Next.js, React, Remix, Angular, NestJS, Ruby on Rails, Java Quarkus, REST APIs.</div>
+      <div class="skill-item"><span class="skill-category">IoT / Embedded:</span> ESP32, ESP-IDF, C/C++ firmware, MQTT, sensors.</div>
+      <div class="skill-item"><span class="skill-category">Cloud / DevOps:</span> GCP, AWS, Vercel, Docker, Linux, Git, CI workflows.</div>
+      <div class="skill-item"><span class="skill-category">Spoken:</span> Portuguese (native), English (advanced), German (basic), Spanish (basic).</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

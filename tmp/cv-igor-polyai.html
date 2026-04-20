@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Igor David — CV</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk-latin-ext.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('../fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('../fonts/dm-sans-latin-ext.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'DM Sans', sans-serif; font-size: 11px; line-height: 1.5; color: #1a1a2e; background: #ffffff; padding: 0; margin: 0; }
+  .page { width: 100%; max-width: 210mm; margin: 0 auto; padding: 2px 0; }
+  .header { margin-bottom: 20px; }
+  .header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: #1a1a2e; letter-spacing: -0.02em; margin-bottom: 6px; line-height: 1.1; }
+  .header-gradient { height: 2px; background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%)); border-radius: 1px; margin-bottom: 10px; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 8px 14px; font-family: 'DM Sans', sans-serif; font-size: 10.5px; line-height: 1.4; color: #555; }
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-row .separator { color: #ccc; }
+  .section { margin-bottom: 18px; }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: hsl(187, 74%, 32%); border-bottom: 1.5px solid #e2e2e2; padding-bottom: 4px; margin-bottom: 10px; line-height: 1.2; }
+  .summary-text { font-size: 11px; line-height: 1.7; color: #2f2f2f; }
+  a { white-space: nowrap; }
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .competency-tag { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 500; color: hsl(187, 74%, 28%); background: hsl(187, 40%, 95%); padding: 4px 10px; border-radius: 3px; border: 1px solid hsl(187, 40%, 88%); }
+  .job { margin-bottom: 14px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+  .job-company { font-family: 'Space Grotesk', sans-serif; font-size: 12.5px; font-weight: 600; color: hsl(270, 70%, 45%); }
+  .job-period { font-size: 10.5px; color: #777; white-space: nowrap; }
+  .job-role { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 6px; }
+  .job-location { font-size: 10px; color: #888; }
+  .job ul { padding-left: 18px; margin-top: 6px; }
+  .job li { font-size: 10.5px; line-height: 1.6; color: #333; margin-bottom: 4px; }
+  .job li strong { font-weight: 600; }
+  .project { margin-bottom: 12px; }
+  .project-title { font-family: 'Space Grotesk', sans-serif; font-size: 11.5px; font-weight: 600; color: hsl(270, 70%, 45%); }
+  .project-desc { font-size: 10.5px; color: #444; margin-top: 3px; line-height: 1.55; }
+  .project-tech { font-size: 9.5px; color: #888; margin-top: 3px; }
+  .edu-item { margin-bottom: 8px; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .edu-title { font-weight: 600; font-size: 11px; color: #333; }
+  .edu-org { color: hsl(270, 70%, 45%); font-weight: 500; }
+  .edu-year { font-size: 10px; color: #777; white-space: nowrap; }
+  .cert-item { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  .cert-title { font-size: 10.5px; font-weight: 500; color: #333; }
+  .cert-org { color: hsl(270, 70%, 45%); }
+  .cert-year { font-size: 10px; color: #777; white-space: nowrap; }
+  .skills-grid { display: flex; flex-direction: column; gap: 4px; }
+  .skill-item { font-size: 10.5px; color: #444; }
+  .skill-category { font-weight: 600; color: #333; font-size: 10.5px; }
+  @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .page { padding: 0; } }
+  .avoid-break, .job, .project, .edu-item, .cert-item { break-inside: avoid; page-break-inside: avoid; }
+  @page { size: A4; margin: 0.6in; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header avoid-break">
+    <h1>Igor David</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>igordavid13@gmail.com</span>
+      <span class="separator">|</span>
+      <a href="https://linkedin.com/in/igor-david-880209171/">linkedin.com/in/igor-david</a>
+      <span class="separator">|</span>
+      <a href="https://github.com/igordavid13">github.com/igordavid13</a>
+      <span class="separator">|</span>
+      <span>Brasília, Brazil — Open to UK relocation (Skilled Worker visa)</span>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">
+      Senior Full-Stack Engineer with 5+ years shipping production systems across <strong>LLM / RAG pipelines</strong>, enterprise backend, and IoT. Built and shipped a production RAG chatbot on <strong>Vespa + Vertex AI</strong> integrated in a <strong>Next.js / React / TypeScript</strong> stack (live at igniteattachments.com). Modernised credit-card authorisation pipelines at CAIXA (one of Brazil's largest banks) with <strong>Java Quarkus, SQL</strong>, and <strong>real-time Angular dashboards</strong>. Comfortable across <strong>Python</strong>, <strong>TypeScript</strong>, <strong>REST APIs</strong>, <strong>data pipelines / ETL</strong>, and <strong>unit testing</strong>. Open to UK relocation — PolyAI is a licensed Skilled Worker sponsor.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">Python</span>
+      <span class="competency-tag">React / Next.js</span>
+      <span class="competency-tag">TypeScript / JavaScript</span>
+      <span class="competency-tag">Production LLM Systems</span>
+      <span class="competency-tag">RAG Pipelines</span>
+      <span class="competency-tag">SQL &amp; REST APIs</span>
+      <span class="competency-tag">Data Pipelines / ETL</span>
+      <span class="competency-tag">Real-time Dashboards</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Arrow — Los Angeles, CA (Remote)</div>
+        <div class="job-period">Apr 2025 — Jan 2026</div>
+      </div>
+      <div class="job-role">Full-Stack Developer — Prompt Engineer</div>
+      <ul>
+        <li>Engineered a <strong>production RAG pipeline</strong> on <strong>Vespa + Vertex AI</strong> with the Vercel AI SDK, ingesting PDF and Markdown knowledge bases for conversational querying at scale.</li>
+        <li>Built end-to-end AI-powered chatbot features in <strong>Next.js, React, TypeScript</strong>, and MongoDB — shipped live at <strong>igniteattachments.com</strong>.</li>
+        <li>Designed and delivered a tractor valuation management system with full CRUD for pricing and inventory (<strong>Next.js, MongoDB, Vespa</strong>).</li>
+        <li>Implemented <strong>data pipelines / ETL</strong> workflows for web-scraped content and catalogue ingestion (<strong>TypeScript, GCP, Python, Crawl4AI</strong>).</li>
+        <li>Worked cross-functionally with product stakeholders to scope, ship and iterate features end-to-end.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">CAIXA Econômica Federal — Brasília</div>
+        <div class="job-period">Jan 2025 — Present</div>
+      </div>
+      <div class="job-role">Software Engineer — Full-Stack Developer (Credit Card division)</div>
+      <ul>
+        <li>Designed and delivered interactive <strong>real-time dashboards</strong> in <strong>Angular</strong> for authorisation metrics and operational KPIs processing millions of transactions (<strong>SQL / DB2</strong>).</li>
+        <li>Refactored core modules of the credit-card authorisation pipeline, improving maintainability and performance across the transaction path (<strong>Java Quarkus, COBOL</strong>).</li>
+        <li>Migrated a legacy COBOL-based card provisioning system to <strong>Java Quarkus</strong>, adding advanced filtering and detailed reporting (<strong>Java Quarkus, DB2</strong>).</li>
+        <li>Built validation features with comprehensive <strong>unit and integration test coverage</strong> ensuring data integrity across card-processing workflows (<strong>Java Quarkus, JUnit</strong>).</li>
+        <li>Implemented full CRUD back-office for card operations, streamlining internal processes (<strong>Angular, Java Quarkus, DB2</strong>).</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">TRINA — Brasília</div>
+        <div class="job-period">Feb 2026 — Present</div>
+      </div>
+      <div class="job-role">Founder</div>
+      <ul>
+        <li>Founded an AI-focused software factory delivering intelligent products for the automotive and insurance verticals — own architecture, standards, and delivery cadence end-to-end.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">BRISA — Brasília</div>
+        <div class="job-period">Sep 2023 — Jan 2025</div>
+      </div>
+      <div class="job-role">Software Engineer — Backend Developer</div>
+      <ul>
+        <li>Built the back-end infrastructure supporting a commercial IoT product line — device communication, data ingestion and remote management (<strong>TypeScript, Next.js, REST APIs</strong>).</li>
+        <li>Designed and engineered four commercial smart devices (intelligent lock, industrial smart hub, panic button, smart garbage collector) with <strong>ESP32 firmware in C / C++ / ESP-IDF</strong> and <strong>PostgreSQL</strong> backing storage.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Neuko — Brasília</div>
+        <div class="job-period">Feb 2024 — Aug 2024</div>
+      </div>
+      <div class="job-role">Data Engineer — Neural Network Engineer</div>
+      <ul>
+        <li>Designed scalable <strong>data-processing pipelines</strong> for electroencephalography (EEG) signals and trained <strong>neural networks (CNNs)</strong> for event classification on complex brainwave data.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">UnB Internet of Things (UIoT Lab) — University of Brasília</div>
+        <div class="job-period">Jan 2021 — Dec 2023</div>
+      </div>
+      <div class="job-role">R&amp;D Engineer</div>
+      <ul>
+        <li>Authored two peer-reviewed IoT papers (fog-computing architecture; ML-backed panic-button system) and contributed to ESP32 smart-device projects for real-time monitoring and campus safety.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Projects</div>
+
+    <div class="project">
+      <div class="project-title">Arrow RAG Chatbot — igniteattachments.com</div>
+      <div class="project-desc">Production RAG pipeline on Vespa + Vertex AI with Vercel AI SDK, integrated into a Next.js / Remix / MongoDB stack for a US tractor-attachments client. Live conversational querying over PDF and Markdown knowledge bases.</div>
+      <div class="project-tech">Next.js · React · TypeScript · Vespa · Vertex AI · Vercel AI SDK · MongoDB</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">CAIXA Credit-Card Authorisation Platform</div>
+      <div class="project-desc">Refactored core modules of the credit-card authorisation pipeline for one of Brazil's largest state banks and migrated legacy COBOL card provisioning to Java Quarkus on DB2, with Angular real-time KPI dashboards.</div>
+      <div class="project-tech">Java Quarkus · Angular · DB2 · COBOL · JUnit</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">BRISA IoT Product Line (ESP32)</div>
+      <div class="project-desc">Shipped four commercial IoT products (smart lock, industrial smart hub, panic button, smart garbage collector) — firmware in C / C++ / ESP-IDF plus backend in TypeScript / Next.js / PostgreSQL.</div>
+      <div class="project-tech">ESP32 · C · C++ · ESP-IDF · TypeScript · Next.js · PostgreSQL</div>
+    </div>
+
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div><span class="edu-title">B.Sc. Computer Engineering</span> — <span class="edu-org">Universidade de Brasília (UnB)</span></div>
+        <div class="edu-year">Aug 2018 — Dec 2024</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Certifications</div>
+    <div class="cert-item">
+      <div><span class="cert-title">Huawei AI Training — ML &amp; Deep Learning</span> <span class="cert-org"></span></div>
+      <div class="cert-year">2022</div>
+    </div>
+    <div class="cert-item">
+      <div><span class="cert-title">Autodesk Fusion 360 — 3D Modeling</span> <span class="cert-org"></span></div>
+      <div class="cert-year">2020</div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-category">Languages:</span> Python, TypeScript, JavaScript, Java, C, C++, SQL, COBOL, Ruby</div>
+      <div class="skill-item"><span class="skill-category">AI / LLM:</span> Production RAG pipelines, Vespa, Vertex AI, Vercel AI SDK, LLM integration, conversational AI, CNNs, NLP</div>
+      <div class="skill-item"><span class="skill-category">Web / Full-Stack:</span> React, Next.js, Remix, Angular, REST APIs, NestJS, Java Quarkus, Ruby on Rails, .NET</div>
+      <div class="skill-item"><span class="skill-category">Data:</span> PostgreSQL, MongoDB, DB2, Vespa, data pipelines, ETL workflows, real-time dashboards</div>
+      <div class="skill-item"><span class="skill-category">Testing:</span> JUnit, unit &amp; integration tests, Python testing, CI workflows</div>
+      <div class="skill-item"><span class="skill-category">Cloud / DevOps:</span> GCP, AWS, Vercel, Git, Docker, Linux</div>
+      <div class="skill-item"><span class="skill-category">IoT / Embedded:</span> ESP32, ESP-IDF, C/C++ firmware, MQTT</div>
+      <div class="skill-item"><span class="skill-category">Languages (human):</span> Portuguese (native), English (advanced), German (basic), Spanish (basic)</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
